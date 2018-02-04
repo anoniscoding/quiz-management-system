@@ -7,6 +7,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import quizmanagementsystem.QuizManagementSystem;
 
 /**
@@ -87,6 +89,22 @@ public class NavigationFxmlController implements Initializable {
                 QuizManagementSystem.getAppStage().sizeToScene();
                 QuizManagementSystem.getAppStage().showAndWait();
         } catch (Exception e) {}
+    }
+    
+    @FXML
+    private void onHelpClick(MouseEvent event) {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("HelpFXML.fxml"));
+        try {
+                Stage stage = new Stage();
+                Scene viewQuestionScene = new Scene(loader.load());
+                stage.setTitle("Help");
+                stage.setScene(viewQuestionScene);
+                stage.setResizable(false);
+                stage.sizeToScene();
+                stage.initModality(Modality.APPLICATION_MODAL);
+                stage.initOwner(QuizManagementSystem.getAppStage());
+                stage.showAndWait();
+            } catch (Exception e) {}
     }
     
 }
