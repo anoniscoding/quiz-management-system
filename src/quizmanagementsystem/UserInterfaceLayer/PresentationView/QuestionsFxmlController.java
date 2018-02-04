@@ -10,6 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -80,21 +81,25 @@ public class QuestionsFxmlController implements Initializable {
     }
 
     @FXML
-    private void onLoadFileClick(ActionEvent event) {
+    private void onLoadFileClick(ActionEvent event) {   
         boolean isCompetitionSelected = new TextIsNotEmptySpecification().isSatisfiedBy(
                                                 String.valueOf(competitionsComboBox.getSelectionModel().getSelectedIndex()));
-        loaderImageView.setVisible(true);
         if (isCompetitionSelected) {
             try {
                 BufferedReader questionsReader = new BufferedReader(new FileReader(getQuestionFile()));
-                parseReader(questionsReader); 
-                loaderImageView.setVisible(false);
-                Notifier.alert("File has been completely analysed.\nThe valid questions have been saved");
+                new Thread(() -> {
+                    Platform.runLater(() -> loaderImageView.setVisible(true));
+                    try {
+                        parseReader(questionsReader); 
+                    } catch (Exception e) {}
+                    Platform.runLater(() -> {
+                        loaderImageView.setVisible(false);
+                        Notifier.alert("File has been completely analysed.\nThe valid questions have been saved");
+                    });
+                }).start();
             } catch (Exception e){}
-        } else { 
-            loaderImageView.setVisible(false);
+        } else
             Notifier.error("Please select a competition"); 
-        } 
     }
 
     private void parseReader(BufferedReader questionsReader) throws IOException {
