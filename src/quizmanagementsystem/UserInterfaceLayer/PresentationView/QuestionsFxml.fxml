@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="questions-page" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quizmanagementsystem.UserInterfaceLayer.PresentationView.QuestionsFxmlController">
+    <stylesheets>
+        <URL value="@/quizmanagementsystem/UserInterfaceLayer/PresentationCss/main.css" />
+    </stylesheets>
+   <children>
+       
+       <fx:include source="NavigationFxml.fxml" />
+          
+          <MenuBar layoutX="-1.0" layoutY="-1.0" prefHeight="28.0" prefWidth="1100.0">
+           <menus>
+             <Menu mnemonicParsing="false" text="File">
+               <items>
+                 <MenuItem mnemonicParsing="false" text="Close" />
+               </items>
+             </Menu>
+               <Menu mnemonicParsing="false" text="Configuration" />
+           </menus>
+         </MenuBar>
+         
+         <ImageView fitHeight="120.0" fitWidth="1112.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../Images/quiz_banner.jpg" />
+            </image>
+         </ImageView>
+         
+       
+       <AnchorPane id="main-view" layoutX="219.0" layoutY="184.0" prefHeight="489.0" prefWidth="851.0">
+         <children>
+            <ComboBox fx:id="competitionsComboBox" layoutX="165.0" layoutY="95.0" prefHeight="25.0" prefWidth="209.0" promptText="Select Competition" />
+            <TextArea fx:id="questionContentTextArea" layoutX="165.0" layoutY="154.0" prefHeight="112.0" prefWidth="464.0" promptText="Type Your Question" />
+            <TextArea fx:id="questionOptionsTextArea" layoutX="165.0" layoutY="311.0" prefHeight="112.0" prefWidth="464.0" promptText="Type Your Options" />
+            <Label layoutX="165.0" layoutY="286.0" prefHeight="17.0" prefWidth="342.0" text="Start each option on a new line. Begin the correct option with *" />
+            <Button layoutX="463.0" layoutY="443.0" mnemonicParsing="false" onAction="#onLoadFileClick" text="Load From File" />
+            <Button layoutX="591.0" layoutY="443.0" mnemonicParsing="false" onAction="#onAddClick" text="Add" />
+            <Label id="viewQuestions" layoutX="717.0" layoutY="91.0" onMouseClicked="#onViewQuestionsClick" prefHeight="25.0" prefWidth="87.0" text="View Questions" />
+            <ImageView fx:id="loaderImageView" fitHeight="46.0" fitWidth="53.0" layoutX="346.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Images/loader.gif" />
+               </image></ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,11 @@
+1. Dylan, Erlang, Haskell are examples of _____________ 
+A) web languages
+B) declarative languages
+*C) functional languages
+D) visual languages
+
+2. A true or false statement put into code that the programmer expects to always be true is an ________ 
+A) exception
+*B) assertion
+C) expression
+D) harness

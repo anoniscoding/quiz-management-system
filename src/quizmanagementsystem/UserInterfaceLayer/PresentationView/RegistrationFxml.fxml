@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="registration-page" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quizmanagementsystem.UserInterfaceLayer.PresentationView.RegistrationFxmlController">
+    <stylesheets>
+        <URL value="@/quizmanagementsystem/UserInterfaceLayer/PresentationCss/main.css" />
+    </stylesheets>
+   <children>
+       
+       <fx:include source="NavigationFxml.fxml" />
+          
+          <MenuBar layoutX="-1.0" layoutY="-1.0" prefHeight="28.0" prefWidth="1100.0">
+           <menus>
+             <Menu mnemonicParsing="false" text="File">
+               <items>
+                 <MenuItem mnemonicParsing="false" text="Close" />
+               </items>
+             </Menu>
+               <Menu mnemonicParsing="false" text="Configuration" />
+           </menus>
+         </MenuBar>
+         
+         <ImageView fitHeight="120.0" fitWidth="1112.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../Images/quiz_banner.jpg" />
+            </image>
+         </ImageView>
+         
+       
+       <AnchorPane id="main-view" layoutX="219.0" layoutY="184.0" prefHeight="489.0" prefWidth="851.0">
+         <children>
+            <TextField fx:id="teamNameField" layoutX="111.0" layoutY="245.0" prefHeight="25.0" prefWidth="244.0" promptText="Team/Individual Name" />
+            <Button layoutX="317.0" layoutY="283.0" mnemonicParsing="false" onAction="#onAddClick" text="Add" />
+            <TableView fx:id="teamsTable" onKeyPressed="#delete" layoutX="482.0" layoutY="25.0" prefHeight="407.0" prefWidth="346.0">
+              <columns>
+                <TableColumn fx:id="teamNameColumn" onEditCommit="#onTeamNameEdit" prefWidth="345.0" text="Team Name" />
+              </columns>
+            </TableView>
+            <ComboBox fx:id="competitionComboBox" layoutX="111.0" layoutY="195.0" prefHeight="25.0" prefWidth="244.0" promptText="Select Competition" />
+            <Label layoutX="482.0" layoutY="467.0" text="Press the delete button to remove a row in the table" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

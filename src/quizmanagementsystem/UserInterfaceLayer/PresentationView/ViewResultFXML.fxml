@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<ScrollPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quizmanagementsystem.UserInterfaceLayer.PresentationView.ViewResultFXMLController">
+   <content>
+      <AnchorPane id="view-results-page" fx:id="viewResultsAnchorPane" prefHeight="489.0" prefWidth="723.0">
+          <stylesheets>
+              <URL value="@/quizmanagementsystem/UserInterfaceLayer/PresentationCss/main.css" />
+          </stylesheets>
+      </AnchorPane>
+   </content>
+</ScrollPane>

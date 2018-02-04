@@ -1,0 +1,183 @@
+/* Configuration page */
+
+#configuration-page{
+    -fx-background-color: #003366;
+}
+
+#configuration-page #main-view{
+    -fx-background-color: white;
+}
+
+#configuration-page .button{
+    -fx-text-fill: black;
+    -fx-background-color: #FFCC00;
+    -fx-cursor: hand;
+}
+
+/* Home page */
+
+#home-page{
+    -fx-background-color: #003366;
+}
+
+#home-page #main-view{
+    -fx-background-color: white;
+    -fx-text-fill: #003366;
+}
+
+/* Load quiz page */
+#load-quiz-page {
+    -fx-background-color: #ffffff;
+}
+
+#load-quiz-page .label{
+    -fx-border-color: green;
+    -fx-border-styles: solid;
+    -fx-border-width: 1;
+    -fx-padding: 20px 30px;
+    -fx-text-fill: white;
+    -fx-background-color: green;
+    -fx-cursor: hand;
+}
+
+#load-quiz-page #teamName{
+    -fx-border-color: white;
+    -fx-border-styles: none;
+    -fx-border-width: 0;
+    -fx-padding: 10px;
+    -fx-text-fill: red;
+    -fx-background-color: white;
+    -fx-font-size: 20px;
+}
+
+#load-quiz-page .button{
+    -fx-text-fill: white;
+    -fx-background-color: black;
+    -fx-cursor: hand;
+}
+
+/* main view page */
+
+#main-view-page #main-view{
+    -fx-background-color: white;
+}
+
+/* Navigation page */
+navigation-page #nav{
+    -fx-border-width: 0 1 0 0;
+    -fx-border-color: black #CCCC99 black black;
+}
+
+#navigation-page .label{
+    -fx-text-fill: #FFCC00;
+    -fx-padding: 20px;
+    -fx-cursor: hand;
+    -fx-font-size: 16px;
+}
+
+#navigation-page .label:hover{
+    -fx-text-fill: gray;
+    -fx-background-color: #000000;
+    -fx-text-fill: white;
+    -fx-padding: 20px;
+    -fx-text-alignment: center;
+}
+
+/* Questions page */
+
+#questions-page{
+    -fx-background-color: #003366;
+}
+
+#questions-page #main-view{
+    -fx-background-color: white;
+}
+
+#questions-page .button{
+    -fx-text-fill: black;
+    -fx-background-color: #FFCC00;
+    -fx-cursor: hand;
+}
+
+#questions-page #viewQuestions{
+    -fx-text-fill: blue;
+    -fx-cursor: hand;
+}
+
+/* Quiz Arena */
+
+#quiz-arena{
+    -fx-background-color: #003366;
+}
+
+#quiz-arena #main-view{
+    -fx-background-color: white;
+}
+
+#quiz-arena .button{
+    -fx-text-fill: black;
+    -fx-background-color: #FFCC00;
+    -fx-cursor: hand;
+}
+
+/* Registration fxml */
+
+#registration-page{
+    -fx-background-color: #003366;
+}
+
+#registration-page #main-view{
+    -fx-background-color: white;
+}
+
+#registration-page .button{
+    -fx-text-fill: black;
+    -fx-background-color: #FFCC00;
+    -fx-cursor: hand;
+}
+
+/* View questions page */
+
+#view-questions-page {
+    -fx-background-color: white;
+}
+
+#view-questions-page .button{
+    -fx-text-fill: black;
+    -fx-background-color: #FFCC00;
+    -fx-cursor: hand;
+}
+
+/* Show questions page */
+
+#show-questions-page .button{
+    -fx-text-fill: white;
+    -fx-background-color: black;
+    -fx-cursor: hand;
+}
+
+#show-questions-page {
+    -fx-background-color: white;
+}
+
+#show-questions-page .radio-button{
+    -fx-font-size: 20px;
+    
+    -fx-padding: 15px;
+    -fx-border-style:solid;
+    -fx-border-radius: 10px;
+    -fx-border-color: lightgreen;
+    -fx-text-fill: black;
+}
+
+/* View results page */
+
+
+#view-results-page {
+    -fx-background-color: white;
+}
+
+#view-results-page .label{
+    -fx-font-size: 20px;
+    -fx-text-fill: green;
+}

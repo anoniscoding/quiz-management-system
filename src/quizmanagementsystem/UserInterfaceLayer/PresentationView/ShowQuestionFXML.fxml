@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quizmanagementsystem.UserInterfaceLayer.PresentationView.ShowQuestionFXMLController">
+   <content>
+      <AnchorPane id="show-questions-page" fx:id="pageAnchorPane" prefHeight="690.0" prefWidth="1265.0">
+          <stylesheets>
+              <URL value="@/quizmanagementsystem/UserInterfaceLayer/PresentationCss/main.css" />
+          </stylesheets>
+         <children>
+            <Label fx:id="timeDurationLabel" layoutX="952.0" layoutY="22.0" prefHeight="33.0" prefWidth="117.0" text="timeDurationLabel">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Pane layoutX="70.0" layoutY="107.0">
+               <children>
+                  <TextFlow fx:id="questionLabel" layoutY="-14.0" prefHeight="75.0" prefWidth="729.0" />
+               </children>
+            </Pane>
+            <Button fx:id="scoreTeamBtn" layoutX="1153.0" layoutY="663.0" mnemonicParsing="false" onAction="#onScoreTeamBtnClick" prefHeight="25.0" prefWidth="90.0" text="Score Team" />
+            <Button fx:id="disableQuestionBtn" layoutX="15.0" layoutY="663.0" mnemonicParsing="false" onAction="#onDisableBtnClick" prefHeight="25.0" prefWidth="110.0" text="Disable Question" />
+            <Button fx:id="restartBtn" layoutX="952.0" layoutY="26.0" mnemonicParsing="false" onAction="#onRestartBtnClick" text="Restart" visible="false" />
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

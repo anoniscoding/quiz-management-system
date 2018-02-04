@@ -1,0 +1,33 @@
+<<<<<<< HEAD
+/Dia-Desktop/target/
+/Dia-Desktop/.idea/
+/Dia-Desktop/DIA.iml
+=======
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+nbactions.xml
+nb-configuration.xml
+
+>>>>>>> c6f6d3d26624a09a73bf47e9f4af2d9b614c1f8e

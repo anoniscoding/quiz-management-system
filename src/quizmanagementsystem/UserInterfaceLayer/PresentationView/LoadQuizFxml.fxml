@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="load-quiz-page" fx:id="anchorPane" prefHeight="691.0" prefWidth="1248.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quizmanagementsystem.UserInterfaceLayer.PresentationView.LoadQuizFxmlController">
+    <stylesheets>
+        <URL value="@/quizmanagementsystem/UserInterfaceLayer/PresentationCss/main.css" />
+    </stylesheets>
+   <children>
+      <Label id="teamName" fx:id="teamNameLabel" layoutX="14.0" layoutY="14.0" text="Team/Individual Name">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label id="teamName" fx:id="roundLabel" layoutX="1026.0" layoutY="14.0" text="Rounds">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="showRes" layoutX="1139.0" layoutY="660.0" mnemonicParsing="false" onAction="#onShowResultClick" text="Show Result" />
+      <ScrollPane layoutX="10.0" layoutY="57.0" prefHeight="594.0" prefViewportHeight="618.0" prefViewportWidth="1217.0" prefWidth="1213.0">
+         <content>
+            <FlowPane fx:id="flowPane" layoutX="10.0" layoutY="72.0" prefHeight="598.0" prefWidth="1215.0" />
+         </content>
+      </ScrollPane>
+      <Button fx:id="shuffleBtn" layoutX="10.0" layoutY="660.0" mnemonicParsing="false" onAction="#onShuffleClick" text="Shuffle" />
+   </children>
+</AnchorPane>

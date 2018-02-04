@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="view-questions-page" prefHeight="503.0" prefWidth="923.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quizmanagementsystem.UserInterfaceLayer.PresentationView.ViewQuestionsFxmlController">
+    <stylesheets>
+        <URL value="@/quizmanagementsystem/UserInterfaceLayer/PresentationCss/main.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="questionsTable" layoutX="39.0" layoutY="29.0" onKeyPressed="#onQuestionTableKeyPress" onKeyReleased="#onQuestionTableKeyRelease" onMouseClicked="#onQuestionTableClick" prefHeight="425.0" prefWidth="414.0">
+        <columns>
+          <TableColumn fx:id="questionColumn" onEditCommit="#onQuestionEdit" prefWidth="411.0" text="Question" />
+        </columns>
+      </TableView>
+      <Label layoutX="39.0" layoutY="472.0" text="Press the delete button to remove a row in the table" />
+  <TableView fx:id="optionsTable" layoutX="546.0" layoutY="155.0" onKeyPressed="#onOptionTableKeyPress" prefHeight="193.0" prefWidth="347.0">
+         <columns>
+            <TableColumn fx:id="optionContentColumn" onEditCommit="#onOptionContentEdit" prefWidth="259.0" text="Option Content" />
+            <TableColumn fx:id="isCorrectColumn" prefWidth="82.0" text="isCorrect" />
+         </columns>
+      </TableView>
+      <Button fx:id="onAddOptionClick" layoutX="855.0" layoutY="363.0" mnemonicParsing="false" onAction="#onAddOptionClick" text="Add" />
+      <TextField fx:id="optionTextField" layoutX="638.0" layoutY="363.0" prefHeight="25.0" prefWidth="196.0" promptText="begin correct option with *" />
+   </children>
+</AnchorPane>
