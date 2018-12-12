@@ -1,1 +1,1 @@
-QuizManagementSystem -- a useful software for conducting a traditional quiz competition
+QuizManagementSystem -- a useful software for conducting quiz competitions
